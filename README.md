@@ -6,6 +6,7 @@ Military-grade encryption with AES-256-GCM, Argon2id key derivation, and HMAC in
 
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![PyPI version](https://badge.fury.io/py/cryptxt.svg)](https://badge.fury.io/py/cryptxt)
+[![npm version](https://badge.fury.io/js/cryptxt-cli.svg)](https://badge.fury.io/js/cryptxt-cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Downloads](https://pepy.tech/badge/cryptxt)](https://pepy.tech/project/cryptxt)
 
@@ -19,8 +20,14 @@ Military-grade encryption with AES-256-GCM, Argon2id key derivation, and HMAC in
 
 ## Quick Install
 
+**Python (pip):**
 ```bash
 pip install cryptxt
+```
+
+**Node.js (npx - no installation):**
+```bash
+npx cryptxt-cli
 ```
 
 Then run:
@@ -31,7 +38,7 @@ cryptxt
 
 ## Installation Methods
 
-### Option 1: pip (Recommended)
+### Option 1: pip (Recommended for Python users)
 
 Install from PyPI:
 ```bash
@@ -47,10 +54,22 @@ cryptxt
 
 Run directly without installing:
 ```bash
-npx cryptxt
+npx cryptxt-cli
 ```
 
-### Option 3: From Source
+### Option 3: npm (Global install)
+
+Install globally:
+```bash
+npm install -g cryptxt-cli
+```
+
+Run:
+```bash
+cryptxt-cli
+```
+
+### Option 4: From Source
 
 Clone and install:
 ```bash
@@ -146,6 +165,7 @@ cryptxt
 ## Links
 
 - **PyPI**: https://pypi.org/project/cryptxt/
+- **npm**: https://www.npmjs.com/package/cryptxt-cli
 - **GitHub**: https://github.com/vyofgod/CryptXT
 - **Issues**: https://github.com/vyofgod/CryptXT/issues
 - **Documentation**: Full installation guide in [INSTALL.md](INSTALL.md)

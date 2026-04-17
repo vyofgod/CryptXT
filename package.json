@@ -1,5 +1,5 @@
 {
-  "name": "cryptxt",
+  "name": "cryptxt-cli",
   "version": "1.0.1",
   "description": "Military-grade file and message encryption tool with AES-256-GCM and Argon2id",
   "main": "bin/cryptxt.js",

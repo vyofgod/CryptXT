@@ -21,23 +21,38 @@ Military-grade encryption with AES-256-GCM, Argon2id key derivation, and HMAC in
 
 ```bash
 pip install cryptxt
+```
+
+Then run:
+
+```bash
 cryptxt
 ```
 
 ## Installation Methods
 
-### Method 1: pip (Recommended)
+### Option 1: pip (Recommended)
+
+Install from PyPI:
 ```bash
 pip install cryptxt
+```
+
+Run the application:
+```bash
 cryptxt
 ```
 
-### Method 2: npx (No installation)
+### Option 2: npx (No installation needed)
+
+Run directly without installing:
 ```bash
 npx cryptxt
 ```
 
-### Method 3: From Source
+### Option 3: From Source
+
+Clone and install:
 ```bash
 git clone https://github.com/vyofgod/CryptXT.git
 cd CryptXT
@@ -47,28 +62,36 @@ python3 cryptxt.py
 
 ## Usage
 
-### Encrypt a Message
-1. Run `cryptxt`
-2. Select option **1** (Encrypt Message)
-3. Enter your message and password
-4. Copy the encrypted Base64 output
+### 1. Encrypt a Message
 
-### Decrypt a Message
-1. Select option **2** (Decrypt Message)
-2. Paste the encrypted Base64 string
-3. Enter the password
+```bash
+cryptxt
+```
 
-### Encrypt a File
-1. Select option **3** (Encrypt File)
-2. Enter file path (e.g., `document.pdf`)
-3. Enter password
-4. File saved as `document.pdf.cryptxt`
+- Select option **1** (Encrypt Message)
+- Enter your message
+- Enter a strong password
+- Copy the encrypted Base64 output
 
-### Decrypt a File
-1. Select option **4** (Decrypt File)
-2. Enter encrypted file path (e.g., `document.pdf.cryptxt`)
-3. Enter password
-4. Original file restored
+### 2. Decrypt a Message
+
+- Select option **2** (Decrypt Message)
+- Paste the encrypted Base64 string
+- Enter the password used for encryption
+
+### 3. Encrypt a File
+
+- Select option **3** (Encrypt File)
+- Enter file path (example: `document.pdf`)
+- Enter a strong password
+- File will be saved as `document.pdf.cryptxt`
+
+### 4. Decrypt a File
+
+- Select option **4** (Decrypt File)
+- Enter encrypted file path (example: `document.pdf.cryptxt`)
+- Enter the password used for encryption
+- Original file will be restored
 
 ## Security Specifications
 

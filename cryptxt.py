@@ -18,7 +18,7 @@ from typing import Optional, Tuple
 
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 from cryptography.hazmat.primitives import hashes
-from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2
+from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 try:
     from argon2 import PasswordHasher
     from argon2.low_level import hash_secret_raw, Type
@@ -48,7 +48,7 @@ class CryptXT:
     - Secure random salt generation
     """
     
-    VERSION = "1.0.0"
+    VERSION = "1.0.1"
     SALT_SIZE = 32
     NONCE_SIZE = 12  # GCM standard nonce size
     TAG_SIZE = 16    # GCM authentication tag size
@@ -82,7 +82,7 @@ class CryptXT:
     
     def derive_key_pbkdf2(self, password: str, salt: bytes) -> bytes:
         """Derive encryption key using PBKDF2 (fallback)"""
-        kdf = PBKDF2(
+        kdf = PBKDF2HMAC(
             algorithm=hashes.SHA256(),
             length=32,
             salt=salt,

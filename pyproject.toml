@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cryptxt"
+version = "1.0.1"
+description = "Military-grade file and message encryption tool with AES-256-GCM and Argon2id"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "vyofgod"}
+]
+keywords = ["encryption", "security", "cryptography", "aes-256", "argon2", "cli", "terminal", "privacy"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Security :: Cryptography",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "cryptography>=41.0.0",
+    "argon2-cffi>=23.1.0",
+    "rich>=13.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/vyofgod/CryptXT"
+Documentation = "https://github.com/vyofgod/CryptXT#readme"
+Repository = "https://github.com/vyofgod/CryptXT"
+Issues = "https://github.com/vyofgod/CryptXT/issues"
+
+[project.scripts]
+cryptxt = "cryptxt:main"
+
+[tool.setuptools]
+py-modules = ["cryptxt"]

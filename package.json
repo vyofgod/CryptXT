@@ -1,0 +1,45 @@
+{
+  "name": "cryptxt",
+  "version": "1.0.1",
+  "description": "Military-grade file and message encryption tool with AES-256-GCM and Argon2id",
+  "main": "bin/cryptxt.js",
+  "bin": {
+    "cryptxt": "./bin/cryptxt.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node bin/install.js"
+  },
+  "keywords": [
+    "encryption",
+    "security",
+    "cryptography",
+    "aes-256",
+    "argon2",
+    "cli",
+    "terminal",
+    "privacy",
+    "file-encryption",
+    "message-encryption"
+  ],
+  "author": "vyofgod",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vyofgod/CryptXT.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vyofgod/CryptXT/issues"
+  },
+  "homepage": "https://github.com/vyofgod/CryptXT#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "preferGlobal": true,
+  "files": [
+    "bin/",
+    "cryptxt.py",
+    "README.md",
+    "LICENSE"
+  ]
+}

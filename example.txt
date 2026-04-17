@@ -1,0 +1,16 @@
+This is a test file for CryptXT encryption.
+
+You can encrypt this file using:
+1. Run: python3 cryptxt.py
+2. Select option 3 (Encrypt File)
+3. Enter file path: example.txt
+4. Enter a password: test123
+5. File will be saved as: example.txt.cryptxt
+
+To decrypt:
+1. Select option 4 (Decrypt File)
+2. Enter file path: example.txt.cryptxt
+3. Enter the same password: test123
+4. Original file will be restored
+
+Stay secure with CryptXT!

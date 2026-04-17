@@ -7,6 +7,7 @@ Military-grade encryption with AES-256-GCM, Argon2id key derivation, and HMAC in
 [![Python 3.7+](https://img.shields.io/badge/python-3.7+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Security: Military Grade](https://img.shields.io/badge/security-military%20grade-green.svg)]()
+[![GitHub](https://img.shields.io/badge/github-CryptXT-blue.svg)](https://github.com/vyofgod/CryptXT)
 
 ## Features
 
@@ -38,26 +39,97 @@ Military-grade encryption with AES-256-GCM, Argon2id key derivation, and HMAC in
 
 ## Installation
 
-### Prerequisites
-- Python 3.7 or higher
+### Quick Install (All Systems)
 
-### Install Dependencies
+#### Linux / macOS
+
+```bash
+# Clone the repository
+git clone https://github.com/vyofgod/CryptXT.git
+cd CryptXT
+
+# Run installation script
+chmod +x install.sh
+./install.sh
+
+# Start the application
+python3 cryptxt.py
+```
+
+#### Windows (Command Prompt)
+
+```cmd
+REM Clone the repository
+git clone https://github.com/vyofgod/CryptXT.git
+cd CryptXT
+
+REM Run installation script
+install.bat
+
+REM Start the application
+python cryptxt.py
+```
+
+#### Windows (PowerShell)
+
+```powershell
+# Clone the repository
+git clone https://github.com/vyofgod/CryptXT.git
+cd CryptXT
+
+# Run installation script
+.\install.bat
+
+# Start the application
+python cryptxt.py
+```
+
+### Manual Installation
+
+#### Prerequisites
+- Python 3.7 or higher
+- pip (Python package manager)
+- git
+
+#### Step 1: Clone Repository
+
+```bash
+git clone https://github.com/vyofgod/CryptXT.git
+cd CryptXT
+```
+
+#### Step 2: Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-Or manually:
+Or install packages individually:
 
 ```bash
 pip install cryptography argon2-cffi rich
 ```
 
-### Quick Start
+#### Step 3: Run Application
 
+**Linux/macOS:**
 ```bash
 python3 cryptxt.py
 ```
+
+**Windows:**
+```cmd
+python cryptxt.py
+```
+
+### Alternative: Direct Download
+
+If you don't have git installed:
+
+1. Download ZIP: [https://github.com/vyofgod/CryptXT/archive/refs/heads/main.zip](https://github.com/vyofgod/CryptXT/archive/refs/heads/main.zip)
+2. Extract the archive
+3. Open terminal/command prompt in the extracted folder
+4. Run installation script or install dependencies manually
 
 ## Security Specifications
 
@@ -206,6 +278,8 @@ Select option **5** to view detailed security specifications including:
 
 ## Testing
 
+### Linux / macOS
+
 Create a test file:
 ```bash
 echo "This is a test file for CryptXT encryption." > test.txt
@@ -237,17 +311,156 @@ Verify decryption:
 cat test.txt  # Should show original content
 ```
 
+### Windows (Command Prompt)
+
+Create a test file:
+```cmd
+echo This is a test file for CryptXT encryption. > test.txt
+```
+
+Encrypt it:
+```cmd
+python cryptxt.py
+REM Select option 3
+REM File: test.txt
+REM Password: TestPass123!
+```
+
+Verify encryption:
+```cmd
+type test.txt.cryptxt
+```
+
+Decrypt it:
+```cmd
+python cryptxt.py
+REM Select option 4
+REM File: test.txt.cryptxt
+REM Password: TestPass123!
+```
+
+Verify decryption:
+```cmd
+type test.txt
+```
+
+### Using Example File
+
+The repository includes an `example.txt` file for testing:
+
+```bash
+# Linux/macOS
+python3 cryptxt.py
+
+# Windows
+python cryptxt.py
+
+# Then select option 3 and use: example.txt
+```
+
+## System Requirements
+
+### Minimum Requirements
+- **OS**: Linux, macOS, Windows 10/11
+- **Python**: 3.7 or higher
+- **RAM**: 128 MB (256 MB recommended for Argon2)
+- **Disk**: 50 MB free space
+
+### Tested On
+- Ubuntu 20.04+, Fedora 35+, Debian 11+
+- macOS 10.14+
+- Windows 10, Windows 11
+
+## Troubleshooting
+
+### Common Issues
+
+**Issue: "Python not found"**
+```bash
+# Linux (Debian/Ubuntu)
+sudo apt install python3 python3-pip
+
+# Linux (Fedora)
+sudo dnf install python3 python3-pip
+
+# macOS
+brew install python3
+
+# Windows: Download from https://www.python.org/downloads/
+```
+
+**Issue: "pip not found"**
+```bash
+# Linux
+sudo apt install python3-pip  # Debian/Ubuntu
+sudo dnf install python3-pip  # Fedora
+
+# macOS
+python3 -m ensurepip --upgrade
+
+# Windows
+python -m ensurepip --upgrade
+```
+
+**Issue: "Permission denied" (Linux/macOS)**
+```bash
+chmod +x cryptxt.py install.sh
+```
+
+**Issue: "Module not found"**
+```bash
+pip install --upgrade -r requirements.txt
+```
+
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ### Development Setup
 
-1. Clone the repository
-2. Install dependencies: `pip install -r requirements.txt`
+**Linux/macOS:**
+```bash
+# Fork and clone
+git clone https://github.com/YOUR_USERNAME/CryptXT.git
+cd CryptXT
+
+# Create virtual environment
+python3 -m venv venv
+source venv/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Make changes and test
+python3 cryptxt.py
+```
+
+**Windows:**
+```cmd
+REM Fork and clone
+git clone https://github.com/YOUR_USERNAME/CryptXT.git
+cd CryptXT
+
+REM Create virtual environment
+python -m venv venv
+venv\Scripts\activate
+
+REM Install dependencies
+pip install -r requirements.txt
+
+REM Make changes and test
+python cryptxt.py
+```
+
+### Contribution Guidelines
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature-name`
 3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+4. Test thoroughly on your platform
+5. Commit: `git commit -m "Add feature"`
+6. Push: `git push origin feature-name`
+7. Submit a pull request
 
 ## License
 
@@ -267,12 +480,49 @@ This software is provided "as is" without warranty of any kind. While it uses mi
 ## Support
 
 For issues, questions, or suggestions:
-- Open an issue on GitHub
-- Check existing documentation
-- Review security specifications
+- **Issues**: [GitHub Issues](https://github.com/vyofgod/CryptXT/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/vyofgod/CryptXT/discussions)
+- **Documentation**: Check this README and code comments
+- **Security**: Review security specifications above
+
+## Quick Command Reference
+
+### Installation Commands
+
+| System | Command |
+|--------|---------|
+| Linux/macOS | `git clone https://github.com/vyofgod/CryptXT.git && cd CryptXT && ./install.sh` |
+| Windows | `git clone https://github.com/vyofgod/CryptXT.git && cd CryptXT && install.bat` |
+
+### Running Commands
+
+| System | Command |
+|--------|---------|
+| Linux/macOS | `python3 cryptxt.py` |
+| Windows | `python cryptxt.py` |
+
+### Update Commands
+
+```bash
+# Linux/macOS
+cd CryptXT
+git pull origin main
+pip install --upgrade -r requirements.txt
+
+# Windows
+cd CryptXT
+git pull origin main
+pip install --upgrade -r requirements.txt
+```
+
+## Links
+
+- **Repository**: [https://github.com/vyofgod/CryptXT](https://github.com/vyofgod/CryptXT)
+- **Issues**: [https://github.com/vyofgod/CryptXT/issues](https://github.com/vyofgod/CryptXT/issues)
+- **Releases**: [https://github.com/vyofgod/CryptXT/releases](https://github.com/vyofgod/CryptXT/releases)
 
 ---
 
 **Stay secure! Protect your data with CryptXT.**
 
-*Version 1.0.0*
+*Version 1.0.0* | [GitHub](https://github.com/vyofgod/CryptXT)
